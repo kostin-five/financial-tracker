@@ -1,0 +1,26 @@
+{
+  "name": "financial-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kostin-five/financial-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kostin-five/financial-tracker/issues"
+  },
+  "homepage": "https://github.com/kostin-five/financial-tracker#readme",
+  "devDependencies": {
+    "typescript": "^6.0.2",
+    "vite": "^6.4.1"
+  }
+}
