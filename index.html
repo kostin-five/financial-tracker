@@ -7,38 +7,7 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1>Мои Финансы</h1>
-        <div class="balance-card">
-          <h2>Баланс: <span id="balance">0</span> ₽</h2>
-        </div>
-      </header>
-      <main>
-        <section class="controls">
-          <form id="transaction-form">
-            <input type="number" id="amount" placeholder="Сумма" required />
-            <select id="type">
-              <option value="income">Доход</option>
-              <option value="expense">Расход</option>
-            </select>
-            <input type="text" id="category" placeholder="Категория" required />
-            <input type="date" id="date" required />
-            <button type="submit">Добавить</button>
-          </form>
-          <div class="filters">
-            <select id="filter-type">
-              <option value="all">Все операции</option>
-              <option value="income">Только доходы</option>
-              <option value="expense">Только расходы</option>
-            </select>
-          </div>
-        </section>
-        <section class="transactions">
-          <ul id="transactions-list"></ul>
-        </section>
-      </main>
-    </div>
-    <script type="module" src="src/app.ts"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

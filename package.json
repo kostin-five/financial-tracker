@@ -20,10 +20,16 @@
   },
   "homepage": "https://github.com/kostin-five/financial-tracker#readme",
   "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^4.7.0",
     "eslint": "^9.39.4",
     "eslint-plugin-react": "^7.37.5",
     "typescript": "^6.0.2",
     "vite": "^6.4.1"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   }
 }
