@@ -1,29 +1,21 @@
-import React, { useContext } from "react";
-import { TransactionContext } from "../context/TransactionContext";
+import React from "react";
+import { useTransactions } from "../hooks/useTransactions";
 import { FilterType } from "../types";
 
 const TransactionList = () => {
-  const { state, dispatch } = useContext(TransactionContext);
+  // Достаем из хука готовые отфильтрованные данные и функцию переключения
+  const { transactions, isLoading, filter, setFilter } = useTransactions();
 
   // Пока данные "летят" из нашего mock-API, показываем загрузку
-  if (state.isLoading) return <p>Загрузка...</p>;
-
-  // Логика фильтрации
-  const filteredTransactions =
-    state.filter === "all"
-      ? state.transactions
-      : state.transactions.filter((t) => t.type === state.filter);
+  if (isLoading) return <p>Загрузка...</p>;
 
   return (
     <div className="transactions">
       <div className="filters">
         <select
-          value={state.filter}
+          value={filter}
           onChange={(e) =>
-            dispatch({
-              type: "SET_FILTER",
-              payload: e.target.value as FilterType,
-            })
+            setFilter(e.target.value as FilterType)
           }
         >
           <option value="all">Все операции</option>
@@ -32,7 +24,7 @@ const TransactionList = () => {
         </select>
       </div>
       <ul>
-        {filteredTransactions.map((t) => (
+        {transactions.map((t) => (
           <li key={t.id}>
             <span>
               <strong>{t.category}</strong> ({t.date})
