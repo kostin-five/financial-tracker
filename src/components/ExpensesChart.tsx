@@ -1,4 +1,3 @@
-import React from "react";
 import { PieChart, Pie, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import { useTransactions } from "../hooks/useTransactions";
 

@@ -1,10 +1,8 @@
-import React from "react";
 import { useBalance } from "../hooks/useBalance";
 
 const Header = () => {
-
   // Считаем баланс на лету
-  const balance = useBalance()
+  const balance = useBalance();
 
   return (
     <header>

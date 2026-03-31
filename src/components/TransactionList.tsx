@@ -1,4 +1,3 @@
-import React from "react";
 import { useTransactions } from "../hooks/useTransactions";
 import { FilterType } from "../types";
 
@@ -14,9 +13,7 @@ const TransactionList = () => {
       <div className="filters">
         <select
           value={filter}
-          onChange={(e) =>
-            setFilter(e.target.value as FilterType)
-          }
+          onChange={(e) => setFilter(e.target.value as FilterType)}
         >
           <option value="all">Все операции</option>
           <option value="income">Только доходы</option>
